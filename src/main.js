@@ -2,7 +2,8 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { environmentsComponent } from './concepts/01-environments'
-
+import { callbacksComponent } from './concepts/02-callbacks';
+import { promeseComponent } from './concepts/03-promeses';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -21,4 +22,6 @@ document.querySelector('#app').innerHTML = `
 console.log("hola mundo");
 /*setupCounter(document.querySelector('#counter'))*/
 const elemento = document.querySelector('.card');
-environmentsComponent(elemento);
+//environmentsComponent(elemento);
+//callbacksComponent(elemento);
+promeseComponent(elemento);
