@@ -5,9 +5,20 @@ import { heroes } from "../data/heroes";
  */
 
 export const promeseComponent = (element) => {
-    element.innerHTML = 'promeseComponent';
-    console.log('promeseComponent');
-   
+    const id1 ='5d86371fd55e2e2a30fe1ccb16532';
+    /*element.innerHTML = element;
+    console.log(findHero(id));*/
+    const renderHero = (hero) =>{
+        element.innerHTML = hero.name;
+    }
+    const renderError = (error) => {
+        element.innerHTML = `<h1>ERROR</h1></br><p>${error}</p>`;
+    }
+
+    /* este es el modo correcto */
+   //findHero(id1).then(pacotilla => renderHero(pacotilla));
+   /* esto solo silve si mando un unico algumento puedo saltarme la variable y mandarla de forma anonima ejemplo siguiente */
+   findHero(id1).then(renderHero).catch(renderError);
 }
 /**
  * 
