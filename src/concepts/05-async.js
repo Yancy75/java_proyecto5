@@ -1,0 +1,40 @@
+/**
+ * 
+ * @param {HTMLDivElement} element 
+ */
+
+import { heroes } from "../data/heroes"
+
+export const asyncComponent = (element) => {
+    const id1 ='5d86371fd55e2e2a30fe1cc333';
+   
+    const renderHero = (grupo = [], accion)=>{
+        switch(accion){
+         case 1: grupo.forEach(hero =>{element.innerHTML = hero.name;});
+                 console.log("entre donde no debia");
+                 break;
+         case 2: grupo.forEach(error =>{
+                     element.innerHTML = `<h1>Error</h1><h3>id:
+                      ${id1}</h3><p>a regresado ${error}</p>`;
+                     });
+                 console.log(grupo);    
+                 break;
+         }
+    }
+
+   encontrarHeroe(id1)
+   .then(heroe=> renderHero([heroe],1))
+   .catch(error=> renderHero([error],2));
+
+    //element.innerHTML = encontrarHeroe(id1).name;
+}
+/**
+ * 
+ * @param {string} id 
+ * 
+ */
+/* el async regresa lo que sea la funcion como una promesa de javascritp */
+const encontrarHeroe = async (id) =>{
+    const heroe = heroes.find(heroe => heroe.id === id);
+    return heroe;
+}
