@@ -6,6 +6,11 @@ import { callbacksComponent } from './concepts/02-callbacks';
 import { promeseComponent } from './concepts/03-promeses01';
 import { promiseRace } from './concepts/04-promesa-race';
 import { asyncComponent } from './concepts/05-async';
+import { asyncawaitComponent } from './concepts/06-async-await';
+import { asyncAwait2Component } from './concepts/07-async-await';
+import { forAwaitComponent } from './concepts/08-for-await';
+import { generadorFuncionesComponent } from './concepts/09-genradores';
+import { generadorAsyncComponent } from './concepts/10-generators-async'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -21,11 +26,16 @@ document.querySelector('#app').innerHTML = `
     </div>
    
   </div>`;
-console.log("hola mundo");
+//console.log("hola mundo");
 /*setupCounter(document.querySelector('#counter'))*/
 const elemento = document.querySelector('.card');
 //environmentsComponent(elemento);
 //callbacksComponent(elemento);
 //promeseComponent(elemento);
 //promiseRace(elemento);
-asyncComponent(elemento);
+//asyncComponent(elemento);
+//asyncawaitComponent(elemento);
+//asyncAwait2Component(elemento);
+//forAwaitComponent(elemento);
+//generadorFuncionesComponent(elemento);
+generadorAsyncComponent(elemento);

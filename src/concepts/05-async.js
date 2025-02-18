@@ -6,19 +6,17 @@
 import { heroes } from "../data/heroes"
 
 export const asyncComponent = (element) => {
-    const id1 ='5d86371fd55e2e2a30fe1cc333';
+    const id1 ='5d86371f1efebc31def272e2';
    
     const renderHero = (grupo = [], accion)=>{
         switch(accion){
-         case 1: grupo.forEach(hero =>{element.innerHTML = hero.name;});
-                 console.log("entre donde no debia");
-                 break;
-         case 2: grupo.forEach(error =>{
-                     element.innerHTML = `<h1>Error</h1><h3>id:
+         case 1:grupo.forEach(hero =>{element.innerHTML = hero.name;});
+                break;
+         case 2:grupo.forEach(error =>{
+                      element.innerHTML = `<h1>Error</h1><h3>id:
                       ${id1}</h3><p>a regresado ${error}</p>`;
                      });
-                 console.log(grupo);    
-                 break;
+                break;
          }
     }
 
@@ -35,6 +33,6 @@ export const asyncComponent = (element) => {
  */
 /* el async regresa lo que sea la funcion como una promesa de javascritp */
 const encontrarHeroe = async (id) =>{
-    const heroe = heroes.find(heroe => heroe.id === id);
-    return heroe;
+       const heroe = heroes.find(heroe => heroe.id === id);
+        return heroe;
 }
