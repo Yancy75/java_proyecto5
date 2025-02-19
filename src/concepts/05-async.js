@@ -24,7 +24,6 @@ export const asyncComponent = (element) => {
    .then(heroe=> renderHero([heroe],1))
    .catch(error=> renderHero([error],2));
 
-    //element.innerHTML = encontrarHeroe(id1).name;
 }
 /**
  * 
