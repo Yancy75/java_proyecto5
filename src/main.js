@@ -1,41 +1,24 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
-import { environmentsComponent } from './concepts/01-environments'
-import { callbacksComponent } from './concepts/02-callbacks';
-import { promeseComponent } from './concepts/03-promeses01';
-import { promiseRace } from './concepts/04-promesa-race';
-import { asyncComponent } from './concepts/05-async';
-import { asyncawaitComponent } from './concepts/06-async-await';
-import { asyncAwait2Component } from './concepts/07-async-await';
-import { forAwaitComponent } from './concepts/08-for-await';
-import { generadorFuncionesComponent } from './concepts/09-genradores';
-import { generadorAsyncComponent } from './concepts/10-generators-async'
+import { setupCounter } from './counter.js'
+import { BrakingbadApp } from './breakingbad/breaking-bad-app.js'
 
 document.querySelector('#app').innerHTML = `
+ <div><img src="https://w0.peakpx.com/wallpaper/703/50/HD-wallpaper-dragon-fire-breath-fantasy-3440x1440-dragon.jpg"></div>
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
+    <a href="https://vitejs.dev" target="_blank">
+       <img src="${viteLogo}" class="logo" alt="Vite logo"/>
     </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
+    <a href="#" target="_blank">
+        <img src="${javascriptLogo}" class="logo vanilla" alt="Javascript logo">
+    </a>   
+    <h1 id="app-title">http app</h1>
     <div class="card">
-      
+     
+
     </div>
-   
-  </div>`;
-//console.log("hola mundo");
-/*setupCounter(document.querySelector('#counter'))*/
+ </div>`;
 const elemento = document.querySelector('.card');
-//environmentsComponent(elemento);
-//callbacksComponent(elemento);
-//promeseComponent(elemento);
-//promiseRace(elemento);
-//asyncComponent(elemento);
-//asyncawaitComponent(elemento);
-//asyncAwait2Component(elemento);
-//forAwaitComponent(elemento);
-//generadorFuncionesComponent(elemento);
-generadorAsyncComponent(elemento);
+BrakingbadApp(elemento);
+//setupCounter(document.querySelector('#counter'))
